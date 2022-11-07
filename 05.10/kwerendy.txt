@@ -1,0 +1,4 @@
+1. SELECT imie, nazwisko FROM kadra WHERE stanowisko = 'fryzjer';
+2. SELECT count(*) FROM uslugi WHERE rodzaj = 2;
+3. CREATE USER 'fryzjer@localhost' IDENTIFIED BY 'Fryz12';
+4. GRANT SELECT, INSERT, UPDATE ON egzamin2.kadra TO fryzjer@localhost;

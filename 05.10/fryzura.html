@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi fryzjerskie</title>
+    <link rel="stylesheet" href="styl2.css">
+    
+</head>
+<body>
+    <div class="big_left">
+        <div class="small_left1">
+            <h2>
+                <a href="index.html">SALON FRYZJERSKI</a>
+            </h2>
+            <img src="obraz2.jpg" alt="Czesanie">
+        </div>
+        <div class="small_left2">
+            <h3>Dziś promocja na strzyżenie włosów</h3>
+            <div><input type="radio" value="krotkie" name="wlosy" id="krotkie">Krótkie</div>
+            <div><input type="radio" value="srednie" name="wlosy" id="srednie">Średnie</div>
+            <div><input type="radio" value="poldlugie" name="wlosy" id="poldlugie">Półdługie</div>
+            <div><input type="radio" value="dlugie" name="wlosy" id="dlugie">Długie</div>
+            <button id="licz">Odkryj promocję</button>
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <div class="big_right">
+        <div class="small_right1">
+            <h2>MENU</h2>
+        </div>
+        <div class="small_right2">
+            <ol>
+                <li>
+                    <a href="fryzura.html">Strzyżenie</a>
+                    <ul>
+                        <li>krótkie</li>
+                        <li>średnie</li>
+                        <li>półdługie</li>
+                        <li>długie</li>
+                    </ul>
+                </li>
+                <li>Czesanie</li>
+                <li>Koloryzacja</li>
+            </ol>
+        </div>
+        <div class="small_right3">
+            <img src="obraz1.jpg" alt="Fryzjer">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Autor: ooooooooo</p>
+    </footer>
+
+    <script>
+        const licz = document.getElementById("licz")
+        licz.onclick = function() {
+            const inputy = document.getElementsByName("wlosy")
+            const output = document.getElementById("output")
+            let dlugosc = ""
+            for(let i = 0 ; i < inputy.length ; i++) {
+                if(inputy[i].checked) dlugosc = inputy[i].value
+            }
+            switch(dlugosc) {
+                case "krotkie":
+                    output.innerText = "Cena strzyżenia: 25"
+                    break
+                case "srednie":
+                    output.innerText = "Cena strzyżenia: 30"
+                    break
+                case "poldlugie":
+                    output.innerText = "Cena strzyżenia: 40"
+                    break
+                case "dlugie":
+                    output.innerText = "Cena strzyżenia: 50"
+                    break
+            }
+        }
+    </script>
+</body>
+</html>
